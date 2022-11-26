@@ -35,4 +35,5 @@ Reachability to 192.168.101.11
 
 # Want to Know Network Automation
 [Enroll to out training programs](http://bit.ly/2mP3SJy)
+
 (c) 2022, Karneliuk.com
