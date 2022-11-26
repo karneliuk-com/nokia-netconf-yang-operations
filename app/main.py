@@ -4,7 +4,6 @@ Sample admin operation via NETCONF
 # Modules
 import os
 import yaml
-from pprint import pprint
 import xmltodict
 from ncclient import manager
 from ncclient.xml_ import to_ele
@@ -54,6 +53,7 @@ def _print_result(nested_data, indent: int = 0) -> None:
         else:
             print(" " * indent + key.split(":")[-1] + ":")
             _print_result(indent=indent, nested_data=value)
+
 
 # Body
 if __name__ == "__main__":
@@ -105,8 +105,11 @@ if __name__ == "__main__":
                 print(f"Reachability to {host['hostname']}")
                 print("=" * terminal_length)
 
-                _print_result(nested_data=parsed_result["rpc-reply"]["nokiaoper:results"]["nokiaoper:summary"])
-
+                _print_result(
+                    nested_data=parsed_result["rpc-reply"]["nokiaoper:results"][
+                        "nokiaoper:summary"
+                    ]
+                )
 
             else:
                 print(f"Device {host['hostname']} DOES NOT support ping via NETCONF")
