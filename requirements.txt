@@ -1,0 +1,4 @@
+scrapli_netconf
+black
+pyyaml
+xmltodict
