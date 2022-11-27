@@ -13,7 +13,13 @@ This repository contains the demo Python code to perform operational activities 
 $ pip install -r requirements.txt
 ```
 
-3. Launch the app:
+3. Setup environment variables with credentails:
+```bash
+$ export AUTOMATION_USER="admin"
+$ export AUTOMATION_PASS="admin"
+```
+
+4. Launch the app:
 ```bash
 $ cd app
 $ python main.py 
